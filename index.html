@@ -1,0 +1,1475 @@
+```html
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>سوشل اسٹڈیز — MCQs تیاری</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        linear-gradient(rgba(239, 225, 190, 0.94), rgba(239, 225, 190, 0.94)),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 31px,
+            rgba(90, 62, 35, 0.08) 32px
+        );
+
+    color: #3b2a1d;
+    font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq",
+                 "Segoe UI", Tahoma, sans-serif;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #304d3b;
+    color: #f4e8c8;
+    padding: 22px 15px;
+    text-align: center;
+
+    border-bottom: 6px solid #b88a44;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #e7d6aa;
+    font-size: 17px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1050px, 94%);
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+    text-align: center;
+
+    background: rgba(255,248,225,0.88);
+
+    border: 2px solid #b88a44;
+    border-radius: 20px;
+
+    padding: 60px 25px;
+
+    box-shadow:
+        0 8px 25px rgba(71,49,25,0.15),
+        inset 0 0 40px rgba(150,110,50,0.06);
+}
+
+.book-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #304d3b;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #70583b;
+    font-size: 19px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    cursor: pointer;
+
+    padding: 13px 25px;
+
+    border-radius: 9px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+.primary {
+    background: #304d3b;
+    color: #f8eac8;
+
+    border: 2px solid #b88a44;
+}
+
+.primary:hover {
+    background: #3d654d;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: #ead9b5;
+    color: #493622;
+
+    border: 2px solid #9d7944;
+}
+
+.secondary:hover {
+    background: #dfc99a;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-title h2 {
+    font-size: 31px;
+    color: #304d3b;
+}
+
+.page-title p {
+    color: #765b39;
+    margin-top: 5px;
+}
+
+/* =========================
+   CHAPTERS
+========================= */
+
+.chapter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 25px;
+}
+
+.chapter {
+    background:
+        linear-gradient(
+            rgba(255,248,225,0.94),
+            rgba(247,235,202,0.94)
+        );
+
+    border: 2px solid #b88a44;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 8px 20px rgba(70,50,25,0.14);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.chapter::before {
+    content: "📜";
+
+    position: absolute;
+
+    left: 18px;
+    top: 12px;
+
+    font-size: 55px;
+
+    opacity: 0.08;
+}
+
+.chapter-number {
+    color: #a06d27;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.chapter h3 {
+    color: #304d3b;
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+
+.chapter p {
+    color: #624a31;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TEST TOP
+========================= */
+
+.test-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: #304d3b;
+
+    color: #f6e9c9;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    border: 2px solid #b88a44;
+
+    margin-bottom: 20px;
+}
+
+#timer {
+    color: #f1cf82;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-box {
+    background: rgba(255,248,225,0.96);
+
+    border: 2px solid #b88a44;
+
+    border-radius: 17px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 25px rgba(70,50,25,0.14);
+}
+
+#question {
+    color: #304d3b;
+
+    font-size: 25px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.option {
+    display: block;
+
+    width: 100%;
+
+    text-align: right;
+
+    background: #f1e4c4;
+
+    color: #493622;
+
+    border: 2px solid #c5a66e;
+
+    margin: 12px 0;
+
+    border-radius: 10px;
+
+    padding: 14px 18px;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #e6d3a8;
+}
+
+.option.selected {
+    background: #304d3b;
+
+    color: #f9edcf;
+
+    border-color: #b88a44;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    gap: 12px;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+.result-box {
+    text-align: center;
+
+    background: rgba(255,248,225,0.97);
+
+    border: 3px solid #b88a44;
+
+    border-radius: 20px;
+
+    padding: 45px 25px;
+
+    box-shadow:
+        0 10px 30px rgba(70,50,25,0.18);
+}
+
+.result-title {
+    color: #304d3b;
+    font-size: 32px;
+}
+
+.score {
+    font-size: 65px;
+
+    color: #a06d27;
+
+    font-weight: bold;
+
+    margin: 15px;
+}
+
+.result-info {
+    color: #634b31;
+
+    font-size: 19px;
+
+    line-height: 2.2;
+}
+
+/* =========================
+   WRONG ANSWERS
+========================= */
+
+.wrong-box {
+    margin-top: 30px;
+
+    text-align: right;
+}
+
+.wrong-box h3 {
+    color: #8b3e2f;
+
+    margin-bottom: 12px;
+}
+
+.wrong-item {
+    background: #f1dfc1;
+
+    border-right: 5px solid #a84d3c;
+
+    border-radius: 9px;
+
+    padding: 15px;
+
+    margin: 12px 0;
+
+    line-height: 2;
+}
+
+.correct {
+    color: #2e6944;
+    font-weight: bold;
+}
+
+.wrong {
+    color: #a83f32;
+    font-weight: bold;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #765b39;
+
+    font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding: 40px 18px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .chapter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #question {
+        font-size: 21px;
+    }
+
+    .test-top {
+        font-size: 14px;
+    }
+
+    .navigation button {
+        width: 50%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>📚 سوشل اسٹڈیز</h1>
+
+    <p>
+        MCQs تیاری مرکز
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home" class="screen active">
+
+    <div class="hero">
+
+        <div class="book-icon">
+            📜
+        </div>
+
+        <h2>
+            سوشل اسٹڈیز MCQs تیاری
+        </h2>
+
+        <p>
+            تاریخ، تحریکِ آزادی اور اہم تاریخی واقعات
+            کے بارے میں اپنی تیاری چیک کریں۔
+            <br>
+            باب منتخب کریں اور اپنا ٹیسٹ شروع کریں۔
+        </p>
+
+        <button
+            class="primary"
+            onclick="showScreen('chapters')">
+
+            📖 ابواب دیکھیں
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHAPTERS
+========================= -->
+
+<section id="chapters" class="screen">
+
+    <button
+        class="secondary back"
+        onclick="showScreen('home')">
+
+        ← واپس
+
+    </button>
+
+
+    <div class="page-title">
+
+        <h2>
+            📚 اپنے باب کا انتخاب کریں
+        </h2>
+
+        <p>
+            جس باب کی تیاری کرنی ہے اسے منتخب کریں۔
+        </p>
+
+    </div>
+
+
+    <div class="chapter-grid">
+
+
+        <!-- CHAPTER 1 -->
+
+        <div class="chapter">
+
+            <div class="chapter-number">
+                باب نمبر 1
+            </div>
+
+            <h3>
+                دنیا 20ویں صدی کے آغاز میں
+            </h3>
+
+            <p>
+
+                انقلاب، برطانوی انقلاب،
+                فرانسیسی انقلاب، امریکی انقلاب،
+                روسی انقلاب، صنعتی انقلاب،
+                لبرل ازم، مادیت، افادیت پسندی،
+                جمہوریت، مغربی معاشرہ،
+                قوم پرستی، پہلی عالمی جنگ،
+                دوسری عالمی جنگ،
+                لیگ آف نیشنز،
+                سلطنتِ عثمانیہ،
+                اٹلی اور جرمنی میں فاشزم۔
+
+            </p>
+
+            <button
+                class="primary"
+                onclick="startTest(1)">
+
+                📝 ٹیسٹ شروع کریں
+
+            </button>
+
+        </div>
+
+
+        <!-- CHAPTER 2 -->
+
+        <div class="chapter">
+
+            <div class="chapter-number">
+                باب نمبر 2
+            </div>
+
+            <h3>
+                تحریکِ آزادی اور مسلمان
+            </h3>
+
+            <p>
+
+                تقسیمِ بنگال،
+                منسوخیِ تقسیمِ بنگال،
+                میثاقِ لکھنؤ،
+                جداگانہ انتخاب،
+                تحریکِ خلافت،
+                نہرو رپورٹ،
+                قائداعظم کے 14 نکات،
+                خطبۂ الٰہ آباد،
+                گول میز کانفرنس،
+                ایکٹ 1935،
+                انتخابات،
+                قیامِ پاکستان،
+                ریڈکلف کمیشن۔
+
+            </p>
+
+            <button
+                class="primary"
+                onclick="startTest(2)">
+
+                📝 ٹیسٹ شروع کریں
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TEST
+========================= -->
+
+<section id="test" class="screen">
+
+
+    <div class="test-top">
+
+        <span id="questionNumber">
+            سوال 1 / 10
+        </span>
+
+        <span id="timer">
+            ⏱️ 05:00
+        </span>
+
+    </div>
+
+
+    <div class="question-box">
+
+        <h2 id="question">
+            سوال
+        </h2>
+
+
+        <div id="options">
+        </div>
+
+
+        <div class="navigation">
+
+            <button
+                class="secondary"
+                onclick="previousQuestion()">
+
+                ← پچھلا
+
+            </button>
+
+
+            <button
+                class="primary"
+                onclick="nextQuestion()">
+
+                اگلا →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESULT
+========================= -->
+
+<section id="result" class="screen">
+
+    <div class="result-box">
+
+        <h2 class="result-title">
+            🏛️ ٹیسٹ مکمل ہوگیا!
+        </h2>
+
+
+        <div
+            class="score"
+            id="score">
+
+            0%
+
+        </div>
+
+
+        <div
+            class="result-info"
+            id="resultText">
+
+        </div>
+
+
+        <div
+            class="wrong-box"
+            id="wrongAnswers">
+
+        </div>
+
+
+        <br>
+
+
+        <button
+            class="primary"
+            onclick="showScreen('chapters')">
+
+            📚 دوبارہ ٹیسٹ دیں
+
+        </button>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<footer>
+
+    📚 سوشل اسٹڈیز MCQs تیاری مرکز
+    <br>
+    تعلیمی مقصد کے لیے
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   MCQ DATA
+===================================================== */
+
+
+/* =========================
+   CHAPTER 1
+========================= */
+
+const chapter1 = [
+
+    {
+        q: "صنعتی انقلاب سب سے پہلے کس ملک میں شروع ہوا؟",
+
+        options: [
+            "فرانس",
+            "برطانیہ",
+            "روس",
+            "جرمنی"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "جمہوریت سے کیا مراد ہے؟",
+
+        options: [
+            "بادشاہت",
+            "عوام کی حکومت",
+            "فوجی حکومت",
+            "نوآبادیاتی حکومت"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "قوم پرستی سے کیا مراد ہے؟",
+
+        options: [
+            "قوم سے وابستگی کا جذبہ",
+            "صرف مذہبی عقیدہ",
+            "تجارتی نظام",
+            "صنعتی نظام"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "پہلی عالمی جنگ کب شروع ہوئی؟",
+
+        options: [
+            "1912ء",
+            "1914ء",
+            "1916ء",
+            "1918ء"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "لیگ آف نیشنز کا قیام کس عالمی جنگ کے بعد ہوا؟",
+
+        options: [
+            "پہلی عالمی جنگ",
+            "دوسری عالمی جنگ",
+            "کریمیا کی جنگ",
+            "فرانسیسی انقلاب"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "دوسری عالمی جنگ کب شروع ہوئی؟",
+
+        options: [
+            "1935ء",
+            "1937ء",
+            "1939ء",
+            "1941ء"
+        ],
+
+        answer: 2
+    },
+
+
+    {
+        q: "فاشزم کا آغاز کس ملک میں ہوا؟",
+
+        options: [
+            "اٹلی",
+            "روس",
+            "برطانیہ",
+            "امریکہ"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "روس کا انقلاب کس سال رونما ہوا؟",
+
+        options: [
+            "1905ء",
+            "1914ء",
+            "1917ء",
+            "1920ء"
+        ],
+
+        answer: 2
+    },
+
+
+    {
+        q: "سلطنتِ عثمانیہ کو انگریزی میں کیا کہا جاتا ہے؟",
+
+        options: [
+            "Ottoman Empire",
+            "British Empire",
+            "Russian Empire",
+            "French Empire"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "لبرل ازم بنیادی طور پر کس تصور پر زور دیتا ہے؟",
+
+        options: [
+            "فرد کی آزادی",
+            "مطلق بادشاہت",
+            "فوجی طاقت",
+            "نوآبادیاتی نظام"
+        ],
+
+        answer: 0
+    }
+
+];
+
+
+/* =========================
+   CHAPTER 2
+========================= */
+
+const chapter2 = [
+
+    {
+        q: "تقسیمِ بنگال کس سال ہوئی؟",
+
+        options: [
+            "1903ء",
+            "1905ء",
+            "1906ء",
+            "1908ء"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "تقسیمِ بنگال کس سال منسوخ کی گئی؟",
+
+        options: [
+            "1909ء",
+            "1911ء",
+            "1913ء",
+            "1915ء"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "میثاقِ لکھنؤ کس سال ہوا؟",
+
+        options: [
+            "1914ء",
+            "1915ء",
+            "1916ء",
+            "1918ء"
+        ],
+
+        answer: 2
+    },
+
+
+    {
+        q: "تحریکِ خلافت کس ملک کے مسئلے سے متعلق تھی؟",
+
+        options: [
+            "برطانیہ",
+            "ترکی",
+            "روس",
+            "فرانس"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "نہرو رپورٹ کب پیش کی گئی؟",
+
+        options: [
+            "1926ء",
+            "1927ء",
+            "1928ء",
+            "1930ء"
+        ],
+
+        answer: 2
+    },
+
+
+    {
+        q: "قائداعظم نے نہرو رپورٹ کے جواب میں کتنے نکات پیش کیے؟",
+
+        options: [
+            "10",
+            "12",
+            "14",
+            "16"
+        ],
+
+        answer: 2
+    },
+
+
+    {
+        q: "خطبۂ الٰہ آباد کس نے پیش کیا؟",
+
+        options: [
+            "سر سید احمد خان",
+            "علامہ محمد اقبال",
+            "لیاقت علی خان",
+            "مولانا محمد علی جوہر"
+        ],
+
+        answer: 1
+    },
+
+
+    {
+        q: "گول میز کانفرنسیں کس مسئلے پر غور کے لیے منعقد ہوئیں؟",
+
+        options: [
+            "ہندوستان کے آئینی مسائل",
+            "یورپی جنگ",
+            "تجارتی معاہدہ",
+            "تعلیمی نظام"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "گورنمنٹ آف انڈیا ایکٹ 1935ء کس ملک سے متعلق تھا؟",
+
+        options: [
+            "ہندوستان",
+            "چین",
+            "ترکی",
+            "روس"
+        ],
+
+        answer: 0
+    },
+
+
+    {
+        q: "قیامِ پاکستان کس سال ہوا؟",
+
+        options: [
+            "1945ء",
+            "1946ء",
+            "1947ء",
+            "1948ء"
+        ],
+
+        answer: 2
+    }
+
+];
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let currentQuestions = [];
+
+let currentQuestion = 0;
+
+let selectedAnswers = [];
+
+let timer;
+
+let timeLeft = 300;
+
+
+/* =====================================================
+   SCREEN SYSTEM
+===================================================== */
+
+function showScreen(id) {
+
+    document.querySelectorAll(".screen")
+        .forEach(screen => {
+            screen.classList.remove("active");
+        });
+
+    document.getElementById(id)
+        .classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+/* =====================================================
+   START TEST
+===================================================== */
+
+function startTest(chapter) {
+
+    if (chapter === 1) {
+        currentQuestions = [...chapter1];
+    }
+
+    if (chapter === 2) {
+        currentQuestions = [...chapter2];
+    }
+
+    currentQuestion = 0;
+
+    selectedAnswers = new Array(
+        currentQuestions.length
+    ).fill(null);
+
+    timeLeft = 300;
+
+    showScreen("test");
+
+    startTimer();
+
+    showQuestion();
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+function startTimer() {
+
+    clearInterval(timer);
+
+    updateTimer();
+
+    timer = setInterval(() => {
+
+        timeLeft--;
+
+        updateTimer();
+
+        if (timeLeft <= 0) {
+
+            clearInterval(timer);
+
+            finishTest();
+        }
+
+    }, 1000);
+}
+
+
+function updateTimer() {
+
+    let minutes =
+        Math.floor(timeLeft / 60);
+
+    let seconds =
+        timeLeft % 60;
+
+    seconds =
+        seconds < 10
+        ? "0" + seconds
+        : seconds;
+
+    document.getElementById("timer")
+        .textContent =
+        `⏱️ ${minutes}:${seconds}`;
+}
+
+
+/* =====================================================
+   SHOW QUESTION
+===================================================== */
+
+function showQuestion() {
+
+    const question =
+        currentQuestions[currentQuestion];
+
+
+    document.getElementById("questionNumber")
+        .textContent =
+        `سوال ${currentQuestion + 1} / ${currentQuestions.length}`;
+
+
+    document.getElementById("question")
+        .textContent =
+        question.q;
+
+
+    const optionsBox =
+        document.getElementById("options");
+
+
+    optionsBox.innerHTML = "";
+
+
+    question.options.forEach(
+        (option, index) => {
+
+            const button =
+                document.createElement("button");
+
+            button.className = "option";
+
+            button.textContent =
+                `${String.fromCharCode(0x41 + index)}. ${option}`;
+
+
+            if (
+                selectedAnswers[currentQuestion]
+                === index
+            ) {
+
+                button.classList.add("selected");
+            }
+
+
+            button.onclick = () => {
+
+                selectedAnswers[currentQuestion]
+                    = index;
+
+                showQuestion();
+
+            };
+
+
+            optionsBox.appendChild(button);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   NEXT QUESTION
+===================================================== */
+
+function nextQuestion() {
+
+    if (
+        selectedAnswers[currentQuestion]
+        === null
+    ) {
+
+        alert("براہِ کرم ایک جواب منتخب کریں۔");
+
+        return;
+    }
+
+
+    if (
+        currentQuestion
+        <
+        currentQuestions.length - 1
+    ) {
+
+        currentQuestion++;
+
+        showQuestion();
+
+    } else {
+
+        finishTest();
+
+    }
+
+}
+
+
+/* =====================================================
+   PREVIOUS QUESTION
+===================================================== */
+
+function previousQuestion() {
+
+    if (currentQuestion > 0) {
+
+        currentQuestion--;
+
+        showQuestion();
+
+    }
+
+}
+
+
+/* =====================================================
+   FINISH TEST
+===================================================== */
+
+function finishTest() {
+
+    clearInterval(timer);
+
+
+    let correct = 0;
+
+    let wrong = [];
+
+
+    currentQuestions.forEach(
+        (question, index) => {
+
+            if (
+                selectedAnswers[index]
+                === question.answer
+            ) {
+
+                correct++;
+
+            } else {
+
+                wrong.push({
+
+                    question:
+                        question.q,
+
+                    userAnswer:
+                        selectedAnswers[index] !== null
+                        ? question.options[
+                            selectedAnswers[index]
+                          ]
+                        : "کوئی جواب منتخب نہیں کیا",
+
+                    correctAnswer:
+                        question.options[
+                            question.answer
+                        ]
+
+                });
+
+            }
+
+        }
+    );
+
+
+    const total =
+        currentQuestions.length;
+
+
+    const percentage =
+        Math.round(
+            (correct / total) * 100
+        );
+
+
+    document.getElementById("score")
+        .textContent =
+        `${percentage}%`;
+
+
+    document.getElementById("resultText")
+        .innerHTML =
+
+        `
+        کل سوالات: <b>${total}</b><br>
+        درست جوابات: <span class="correct">${correct}</span><br>
+        غلط جوابات: <span class="wrong">${total - correct}</span><br>
+        `;
+
+
+    const wrongBox =
+        document.getElementById("wrongAnswers");
+
+
+    if (wrong.length === 0) {
+
+        wrongBox.innerHTML =
+            `
+            <h3 class="correct">
+                🎉 شاباش! تمام جوابات درست ہیں۔
+            </h3>
+            `;
+
+    } else {
+
+        wrongBox.innerHTML =
+            `<h3>❌ غلط جوابات</h3>`;
+
+
+        wrong.forEach(item => {
+
+            wrongBox.innerHTML +=
+
+            `
+            <div class="wrong-item">
+
+                <b>
+                    ${item.question}
+                </b>
+
+                <br>
+
+                <span class="wrong">
+                    آپ کا جواب:
+                    ${item.userAnswer}
+                </span>
+
+                <br>
+
+                <span class="correct">
+                    درست جواب:
+                    ${item.correctAnswer}
+                </span>
+
+            </div>
+            `;
+
+        });
+
+    }
+
+
+    showScreen("result");
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+showScreen("home");
+
+</script>
+
+</body>
+</html>
+```
